@@ -484,7 +484,7 @@ async function main() {
         }
 
         async function mudaRating(){
-            let novoRating = document.getElementById("novo-rating").innerHTML
+            let novoRating = document.getElementById("novo-rating").value
             const transacaoRating = await contract.mudaRating(novoRating)
             await transacaoRating.wait()
         }
@@ -515,10 +515,10 @@ async function main() {
             
         }
 
-        rating()  
+        rating()
 
         let button5 = document.getElementById("button-rating")
-        button5.addEventListener("click", mudaRating)
+        button5.addEventListener("click", mudaRating)     
 
         let button4 = document.getElementById("button-burn")
         button4.addEventListener("click", burn)
