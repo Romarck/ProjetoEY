@@ -510,6 +510,13 @@ async function main() {
 
         totalSupply()
 
+        async function rating(){
+            document.getElementById("rating").innerHTML = await contract.rating()
+            
+        }
+
+        rating()  
+
         let button5 = document.getElementById("button-rating")
         button5.addEventListener("click", mudaRating)
 
